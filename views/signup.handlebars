@@ -1,0 +1,19 @@
+<h1>Signup</h1>
+
+<form class="row" action="/signup" method="post">
+    <div class="mb-3 col-3">
+        <label class="form-label">Username</label>
+        <input type="username" class="form-control" name="username">
+    </div>
+    <div class="mb-3 col-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="password">
+    </div>
+    {{#if error}}
+    <p>{{error}}</p>
+    {{/if}}
+    <div>
+        <button type="submit" class="btn btn-primary">Signup</button>
+    </div>
+</form>
+<span>Already have an account? </span><a href="/login"><button class="btn btn-outline-light">Login</button></a>

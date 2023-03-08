@@ -1,0 +1,23 @@
+<h1 class="display-6">Login</h1>
+
+<form class="row" action="/login" method="post">
+    <div class="mb-3 col-3">
+        <label class="form-label">Username</label>
+        <input type="username" class="form-control" name="username">
+    </div>
+    <div class="mb-3 col-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="password">
+    </div>
+    {{#if error}}
+    <p>{{error}}</p>
+    {{/if}}
+    <div>
+        <button type="submit" class="btn btn-primary">Signup</button>
+    </div>
+</form>
+<br>
+<br>
+<a href="/facebook"><button class="btn btn-light">Facebook Login</button></a>
+<a href="/google"><button class="btn btn-light">Google Login</button></a>
+<span>Don't have an account? </span><a href="/signup"><button class="btn btn-outline-light">Signup</button></a>
